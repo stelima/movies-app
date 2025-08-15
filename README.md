@@ -1,3 +1,25 @@
+# Movies App
+
+Um aplicativo web que lista filmes usando a **API do IMDb**, construído com **Next.js Server Components**. Permite visualizar informações básicas de filmes de forma rápida e moderna.
+
+---
+
+## 🚀 Funcionalidades
+
+- Listagem de filmes populares.
+- Busca por títulos.
+- Renderização com **Server Components** do Next.js para melhor performance.
+- Layout responsivo para desktop e mobile.
+
+---
+
+## 🛠 Tecnologias
+
+- **Next.js 13+** (Server Components)
+- **React**
+- **TypeScript**
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
