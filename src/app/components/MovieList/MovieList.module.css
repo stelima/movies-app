@@ -1,6 +1,6 @@
 .container {
   padding: 20px;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: 0 auto;
   background: #030014;
 }
@@ -22,14 +22,24 @@
   justify-content: center;
 }
 
+@keyframes hover-pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
 .listItem {
   border-radius: 1rem;
   padding: 10px;
   border-radius: 6px;
   text-align: center;
   background-color: #fafafa;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
+  transition:
+    box-shadow 0.8s ease,
+    filter 0.8s ease;
   width: 240px;
   flex-shrink: 0;
   background: #0f0d23;
@@ -37,8 +47,27 @@
   color: #fff;
 }
 
-.listItem:hover {
-  box-shadow: 0 4px 8px rgba(230, 12, 12, 0.1);
+.listItem:hover,
+.listItem:focus-visible {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .listItem:hover,
+  .listItem:focus-visible {
+    animation: hover-pulse 0.8s ease infinite alternate;
+  }
+}
+
+.movieLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.movieLink > h2 {
+  margin: 0;
 }
 
 .movieTitle {
