@@ -1,15 +1,19 @@
 import Image from 'next/image';
+import type { ReactElement } from 'react';
 import { getMovieDetails } from '@/lib/tmdb';
 import styles from './page.module.css';
 
 interface MoviePageProps {
-  params: {
-    id: string;
-  };
+  // Match Next's generated `PageProps` which expects `params` as a Promise
+  params?: Promise<{ id?: string | string[] | undefined } | undefined>;
 }
 
-export default async function MoviePage({ params }: MoviePageProps) {
-  const movie = await getMovieDetails(params.id);
+export default async function MoviePage({ params }: MoviePageProps): Promise<ReactElement | null> {
+  const resolvedParams = (await params) ?? {};
+  const rawId = (resolvedParams as { id?: string | string[] | undefined }).id;
+  const id = Array.isArray(rawId) ? rawId[0] : rawId;
+
+  const movie = await getMovieDetails(id as string);
 
   if (!movie) {
     return <p>Filme não encontrado.</p>;
