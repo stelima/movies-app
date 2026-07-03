@@ -1,12 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Movie } from '@/interfaces/movie';
 import styles from './MovieList.module.css';
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string | null;
-}
 
 interface MovieListProps {
   movies: Movie[];

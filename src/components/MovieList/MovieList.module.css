@@ -38,8 +38,8 @@
   text-align: center;
   background-color: #fafafa;
   transition:
-    box-shadow 0.8s ease,
-    filter 0.8s ease;
+  box-shadow 0.8s ease,
+  filter 0.8s ease;
   width: 240px;
   flex-shrink: 0;
   background: #0f0d23;

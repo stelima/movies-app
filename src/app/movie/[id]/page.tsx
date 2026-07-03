@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { ReactElement } from 'react';
-import { getMovieDetails } from '@/lib/tmdb';
+import { getMovieDetails } from '@/services/movie.service';
 import styles from './page.module.css';
 
 interface MoviePageProps {

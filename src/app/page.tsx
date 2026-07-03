@@ -1,8 +1,14 @@
-import MovieList from './components/MovieList/MovieList';
-import { getLatestMovies } from '@/lib/tmdb';
+import MovieList from '../components/MovieList/MovieList';
+import MovieSearch from '../components/MovieSearch/MovieSearch';
+import { getLatestMovies } from '@/services/movie.service';
 
 export default async function Home() {
   const movies = await getLatestMovies();
 
-  return <MovieList movies={movies} />;
+  return (
+    <main>
+      <MovieSearch />
+      <MovieList movies={movies} />
+    </main>
+  );
 }
