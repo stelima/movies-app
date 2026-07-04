@@ -42,27 +42,24 @@ export default function MovieSearch() {
   }, [query, debouncedSearch]);
 
   return (
-    <div>
-      <label htmlFor="movie-search" style={{ color: '#fff' }}>
-        Buscar filme: 
-      </label>
+    <div className={styles.container}>
       <input
         id="movie-search"
         type="text"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Digite o título do filme"
-        style={{ height: '40px' }}
+        placeholder="Buscar filme.."
+        className={styles.input}
       />
 
-      {loading && <p>Carregando...</p>}
-      {error && <p>{error}</p>}
+      {loading && <p className={styles.message}>Carregando...</p>}
+      {error && <p className={styles.message}>{error}</p>}
 
       <div className={styles.results}>
         {results.length > 0 && (
           <div>
             {results.map((movie) => (
-              <div key={movie.id} style={{ padding: '10px' }}>
+              <div key={movie.id} className={styles.resultItem}>
                 <Link href={`/movie/${movie.id}`}>{movie.title}</Link>
               </div>
             ))}

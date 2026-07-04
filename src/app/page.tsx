@@ -1,5 +1,5 @@
 import MovieList from '../components/MovieList/MovieList';
-import MovieSearch from '../components/MovieSearch/MovieSearch';
+import Header from '../components/Header/Header';
 import { getLatestMovies } from '@/services/movie.service';
 
 export default async function Home() {
@@ -7,8 +7,8 @@ export default async function Home() {
 
   return (
     <main>
-      <MovieSearch />
-      <MovieList movies={movies} />
+     <Header />
+     <MovieList movies={movies} />
     </main>
   );
 }

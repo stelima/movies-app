@@ -1,4 +1,4 @@
-# Movies App
+# Lumière - Movies App
 
 Um aplicativo web que lista filmes usando a **API do IMDb**, construído com **Next.js Server Components**. Permite visualizar informações básicas de filmes de forma rápida e moderna.
 
@@ -15,7 +15,7 @@ Um aplicativo web que lista filmes usando a **API do IMDb**, construído com **N
 
 ## 🛠 Tecnologias
 
-- **Next.js 13+** (Server Components)
+- **Next.js 15+** (Server Components)
 - **React**
 - **TypeScript**
 ---

@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  min-height: 80px;
+  background: #1B1A55;
+  color: #9290C3;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+    padding: 20px;
+  }
+}
+

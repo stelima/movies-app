@@ -10,7 +10,7 @@ interface MovieListProps {
 export default function MovieList({ movies }: MovieListProps) {
   return (
     <main className={styles.container}>
-      <h1 className={styles.title}>Últimos lançamentos</h1>
+      <h3 className={styles.title}>Últimos lançamentos</h3>
 
       <ul className={styles.list}>
         {movies.map((movie) => (
